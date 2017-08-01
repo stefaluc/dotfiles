@@ -10,6 +10,7 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'francoiscabrol/ranger.vim'
 Plug 'tpope/vim-unimpaired'
 Plug 'scrooloose/nerdtree'
+Plug 'tpope/vim-fugitive'
 call plug#end()
 
 let g:javascript_plugin_flow = 1
