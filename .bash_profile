@@ -10,6 +10,9 @@ export TERM=xterm-256color
 
 # search for file with fzf then open in vim
 alias vifzf='vim $(fzf --height 40%)'
+alias python=python3
+alias pip=pip3
+alias sudo='sudo ' # apply aliases on sudo
 
 # colorize grep output
 export GREP_OPTIONS='--color=always'
@@ -22,3 +25,8 @@ export GREP_OPTIONS='--color=always'
 alias gs="git status"
 
 export PATH=$PATH:/usr/local/go/bin
+
+# python virtualenvwrapper
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+export WORKON_HOME=$HOME/.virtualenvs
+source /usr/local/bin/virtualenvwrapper.sh

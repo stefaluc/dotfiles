@@ -21,6 +21,11 @@ let g:ale_lint_on_text_changed = 0
 let g:mustache_abbreviations = 1
 let g:jsx_ext_required = 0
 
+syntax enable
+set background=dark
+colorscheme solarized
+let g:solarized_termcolors=256
+
 filetype plugin indent on
 syntax enable
 
@@ -40,15 +45,15 @@ set cursorline
 hi CursorLine ctermbg=238 cterm=none
 
 " Change cursor shape on insert mode in tmux (mac)
-" let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\" " Vertical bar
-" let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\" " Block bar
+let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\" " Vertical bar
+let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\" " Block bar
 
 " Change cursor shape on insert mode in tmux (linux)
-if has("autocmd")
-  au InsertEnter * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/Default/cursor_shape ibeam"
-  au InsertLeave * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/Default/cursor_shape block"
-  au VimLeave * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/Default/cursor_shape block"
-endif
+"if has("autocmd")
+"  au InsertEnter * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/Default/cursor_shape ibeam"
+"  au InsertLeave * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/Default/cursor_shape block"
+"  au VimLeave * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/Default/cursor_shape block"
+"endif
 
 " fzf.vim
 " Mapping selecting mappings
